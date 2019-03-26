@@ -58,6 +58,8 @@ time, mark, audio, video {
   flex-basis: 200px;
 }
 .container{
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
