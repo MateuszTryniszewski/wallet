@@ -13,14 +13,14 @@
       <h1>Kontroluj wydatki</h1>
       <p>W szybki i prosty sposób kontroluj swoje wydatki, dodając je poniżej</p>
     </div>
-    <form class="form--add" action="">
+    <form class="form--add" method="post" id="api_add_form">
       <div class="flex margin-1">
-        <label class="flex-item--label"for="tytul">Tytuł:</label>
-        <input class="input" type="text" id="tytul">
+        <label class="flex-item--label" for="tytul">Tytuł:</label>
+        <input class="input" type="text" name="tytul" id="tytul">
       </div>
       <div class="flex margin-1">
-        <label class="flex-item--label"for="kategoria">Kategoria:</label>
-        <select class="input" id="kategoria">
+        <label class="flex-item--label" for="kategoria">Kategoria:</label>
+        <select class="input" name="kategoria" id="kategoria">
           <option value="Jedzenie">Jedzenie</option>
           <option value="Samochod">Samochód</option>
           <option value="rozrywka">Rozrywka</option>
@@ -30,7 +30,9 @@
       </div>
       <div class="flex margin-1">
         <label class="flex-item--label" for="kwota">Kwota:</label>
-        <input class="input" type="number" id="kwota">
+        <input class="input" type="number" name="kwota" id="kwota">
+        <input type="hidden" name="action" id="action" value="insert">
+        
       </div>
       <div class="flex center margin-1">
           <label class="flex-item--label" ></label>
@@ -57,39 +59,26 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="row">
+          <!-- <tr class="row">
             <td></td>
             <td></td>
             <td>suma</td>
             <td>2123.75</td>
-          </tr>
-          <tr class="row">
+          </tr> -->
+          <!-- <tr class="row">
             <td>2019-03-21 19:02</td>
             <td>Zakup produktow na obiad</td>
             <td>jedzenie</td>
             <td>134.75</td>
-          </tr>
-          <tr class="row">
-            <td>2019-03-21 19:02</td>
-            <td>Zakup produktow na obiad</td>
-            <td>jedzenie</td>
-            <td>134.75</td>
-          </tr>
-          <tr class="row">
-            <td>2019-03-21 19:02</td>
-            <td>Zakup produktow na obiad</td>
-            <td>jedzenie</td>
-            <td>134.75</td>
-          </tr>
-          <tr class="row">
-            <td>2019-03-21 19:02</td>
-            <td>Zakup produktow na obiad</td>
-            <td>jedzenie</td>
-            <td>134.75</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
   </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
